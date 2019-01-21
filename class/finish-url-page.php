@@ -40,6 +40,11 @@ get_header(); ?>
 			?> 
 				<h3>Payment Success!</h3>
 				<hr>
+				<h4>Order Detail : </h4>
+				<p> Order ID : <?php echo $midtrans_notification->order_id; ?> </p>
+				<p> Jumlah Pembayaran Rp. : <?php echo $midtrans_notification->gross_amount; ?> </p>
+				<p> Waktu Transaksi : <?php echo $midtrans_notification->transaction_time; ?> </p>
+				<br>
 				<p>We have received your payment, your order is being processed. Thank you!</p>
 			<?php
 		}else{
@@ -47,6 +52,11 @@ get_header(); ?>
 			?> 
 				<h3>Payment Failed!</h3>
 				<hr>
+				<h4>Order Detail : </h4>
+				<p> Order ID : <?php echo $midtrans_notification->order_id; ?> </p>
+				<p> Jumlah Pembayaran Rp. : <?php echo $midtrans_notification->gross_amount; ?> </p>
+				<p> Waktu Transaksi : <?php echo $midtrans_notification->transaction_time; ?> </p>
+				<br>
 				<p>Your payment is not yet completed. Please complete your payment or do another checkout. Thank you!</p>
 			<?php
 		}
